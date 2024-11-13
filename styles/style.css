@@ -3,3 +3,58 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr; /* проверить */
+  grid-template-rows: 1fr min-content 1fr; /* проверить */
+  height: 100vh;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.decorated-zone {
+
+}
+
+.header__theme-menu {
+
+}
+
+.header__theme-menu-list {
+
+}
+
+.header__theme-menu-item {
+
+}
+
+.header__theme-menu-button {
+
+}
+
+.header__theme-menu-button_active {
+
+}
+
+.header__theme-menu-button_type_light {
+
+}
+
+.header__theme-menu-button_type_auto {
+
+}
+
+.header__theme-menu-button_type_dark {
+
+}
+
+.header__theme-title {
+
+}
+
+.header__theme-title_description {
+  display: block;
+}
