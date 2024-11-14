@@ -1,26 +1,50 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  padding-inline: 10px;
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 1fr; /* проверить */
-  grid-template-rows: 1fr min-content 1fr; /* проверить */
-  height: 100vh;
-  background-image: url(../images/cover-image-dark.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  grid-template-rows: 1fr 192px 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
 }
 
 .decorated-zone {
+  position: relative;
+}
 
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+  border-inline-end: 1px solid #ff0070;
+  border-block-start: 1px solid #ff0070;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: 0;
+  border-inline-start: 1px solid #ff0070;
+  border-block-end: 1px solid #ff0070;
+  inline-size: 25px;
+  block-size: 25px;
 }
 
 .header__theme-menu {
-
+  justify-items: end;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -51,10 +75,31 @@
 
 }
 
-.header__theme-title {
-
+.header__theme-title,
+.footer__theme-title {
+  color: #db00ff;
+  font-size: 116px;
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 #ff0070;
 }
 
 .header__theme-title_description {
-  display: block;
+  display: block;;
+  align-self: center;
+  color: #000028;
+  background-color: #ff0070;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.footer {
+  display: grid;
+  justify-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+}
+
+.footer__theme-title {
+  align-self: center;
 }

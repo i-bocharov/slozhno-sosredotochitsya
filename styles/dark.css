@@ -10,3 +10,41 @@
     чем стили в медиазапросе предпочтений пользователя
   */
 }
+
+.header__theme_dark-decor {
+  position: absolute;
+  top: 0;
+  right: 28px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: calc(25 / 18);
+  color: #ff0070;
+  /*color: var(--nav-color);
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  text-transform: uppercase;
+  inset-inline-end: calc(var(--main-gap) + 28px);
+  inset-block-start: calc(var(--main-gap) + 2px);*/
+}
+
+.header__theme_dark-decor::after {
+  content: '';
+  position: absolute;
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px #ff0070;
+  background-color: #ff0070;
+  inline-size: 10px;
+  block-size: 10px;
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+  /*
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--nav-color);
+  background-color: var(--nav-color);
+  inline-size: 10px;
+  block-size: 10px;
+  inset-inline-end: 0;
+  inset-block-start: 50%;*/
+}
