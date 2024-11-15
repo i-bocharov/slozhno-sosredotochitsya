@@ -13,7 +13,7 @@
 
 .header__theme_dark-decor {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 28px;
   font-size: 18px;
   font-weight: normal;
