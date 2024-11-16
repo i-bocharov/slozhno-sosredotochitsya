@@ -2,7 +2,7 @@
 
 .page {
   padding-inline: 10px;
-  background-image: url(../images/cover-image-dark.png);
+  background-image: var(--page-bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -23,8 +23,8 @@
 .decorated-zone::before {
   content: '';
   position: absolute;
-  border-inline-end: 1px solid #ff0070;
-  border-block-start: 1px solid #ff0070;
+  border-inline-end: 1px solid var(--decor-color, #ff0070);
+  border-block-start: 1px solid var(--decor-color, #ff0070);
   inset-inline-end: 0;
   inset-block-start: 10px;
   inline-size: 25px;
@@ -34,8 +34,8 @@
 .decorated-zone::after {
   content: '';
   position: absolute;
-  border-inline-start: 1px solid #ff0070;
-  border-block-end: 1px solid #ff0070;
+  border-inline-start: 1px solid var(--decor-color, #ff0070);
+  border-block-end: 1px solid var(--decor-color, #ff0070);
   inset-inline-start: 0;
   inset-block-end: 10px;
   inline-size: 25px;
@@ -45,11 +45,12 @@
 .header__theme-menu {
   justify-items: end;
   align-self: center;
+  padding-block-start: 10px;
 }
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
 }
 
 .header__theme-menu-item {
@@ -58,16 +59,17 @@
 
 .header__theme-menu-button {
   border: none;
-  color: #ff0070;
-  background-color: transparent;
   padding: 2px 13px 4px;
+  color: var(--nav-color, #ff0070);
+  font-weight: normal;
+  font-size: 18px;
   line-height: 1;
   text-transform: lowercase;
+  background-color: transparent;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid #ff0070;
-
+  outline: 1px solid var(--nav-color, #ff0070);
 }
 
 .header__theme-menu-button_type_light {
@@ -84,20 +86,20 @@
 
 .header__theme-title,
 .footer__theme-title {
-  color: #db00ff;
+  color: var(--page-title-color, #db00ff);
   font-size: 116px;
   line-height: 0.825;
-  text-shadow: 4px 4px 0 #ff0070;
+  text-shadow: 4px 4px 0 var(--page-title-shadow-color, #ff0070);
 }
 
 .header__theme-title_description {
   display: block;;
   align-self: center;
-  color: #000028;
+  color: var(--page-title-desc-color, #000028);
   font-weight: bold;
   font-size: 18px;
   line-height: 1.3;
-  background-color: #ff0070;
+  background-color: var(--page-title-bg-color, #ff0070);
 }
 
 .main {
@@ -107,23 +109,20 @@
 }
 
 .main__section {
-
+  display: grid;
+  gap: 20px;
 }
 
 .main__section-title {
-  font-size: 18px;
+  color: var(--section-title-color, #ff0070);
   font-weight: bold;
+  font-size: 18px;
   line-height: 1.3;
-  color: #ff0070;
-  margin-block-end: 20px;
-}
-
-.main__section-subtitle {
-
 }
 
 .main__section-list {
-
+  display: grid;
+  gap: 20px;
 }
 
 .main__section-item {
@@ -134,40 +133,67 @@
 
 }
 
-.main__article-title,
-.main__section-subtitle {
+.main__article-title {
   display: inline-block;
-  inline-size: 100%;
-  background-color: #ff0070;
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.3;
   color: #000028;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: #ff0070;
+  inline-size: 100%;
 }
 
-.main__article_galery-title {
+.main__article-subtitle {
   display: inline-block;
-  inline-size: 100%;
-  background-color: #ff0070;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.3;
   color: #000028;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: #ff0070;
+  inline-size: 100%;
 }
 
 .main__article-text {
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 1.3;
   color: #f1b2ce;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3;
 }
 
 .main__article-link {
-  color: #ff0070;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  text-shadow: 2px 2px 0 #ff0070;
 }
 
-.main__section-image {
+.main__article-link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.main__section_gallery {
+  display: grid;
+  gap: 10px;
+}
+
+.main__section_gallery-title {
+  display: inline-block;
+  margin-block-end: 10px;
+  color: #000028;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: #ff0070;
+  inline-size: 100%;
+}
+
+.main__section_gallery-list {
+
+}
+
+.main__section_gallery-item {
+
+}
+
+.main__section_gallery-image {
   inline-size: 100%;
   min-block-size: 100%;
 }
