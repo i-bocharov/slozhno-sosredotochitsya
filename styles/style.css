@@ -8,10 +8,19 @@
   background-size: cover;
   background-attachment: fixed;
 }
-
+/*
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding-block: 10px;
+}
+*/
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr 1fr;
   block-size: 100vh;
   min-block-size: 668px;
   padding-block: 10px;
@@ -42,8 +51,14 @@
   inline-size: 25px;
   block-size: 25px;
 }
-
+/*
 .header__theme-menu {
+  justify-items: end;
+  align-self: center;
+}
+*/
+.header__theme-menu {
+  grid-column: span 2;
   justify-items: end;
   align-self: center;
 }
@@ -83,7 +98,7 @@
 .header__theme-menu-button_type_dark {
 
 }
-
+/*
 .header__theme-title,
 .footer__theme-title {
   color: var(--page-title-color, #db00ff);
@@ -91,9 +106,29 @@
   line-height: 0.825;
   text-shadow: 4px 4px 0 var(--page-title-shadow-color, #ff0070);
 }
+*/
+.header__theme-title,
+.footer__theme-title {
+  grid-column: span 2;
+  color: var(--page-title-color, #db00ff);
+  font-size: 116px;
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--page-title-shadow-color, #ff0070);
+}
 
+/*
 .header__theme-title_description {
-  display: block;;
+  display: block;
+  align-self: center;
+  color: var(--page-title-desc-color, #000028);
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.3;
+  background-color: var(--page-title-bg-color, #ff0070);
+}
+*/
+.header__theme-title_description {
+  grid-column: span 2;
   align-self: center;
   color: var(--page-title-desc-color, #000028);
   font-weight: bold;
@@ -214,4 +249,31 @@
 
 .footer__theme-title {
   align-self: center;
+}
+
+@media (375px < width <= 768px) {
+  .page {
+    padding-inline: 20px;
+  }
+
+  .header {
+    padding-block: 21px;
+  }
+
+  .decorated-zone::before {
+    inset-block-start: 20px;
+  }
+
+  .decorated-zone::after {
+    inset-block-end: 20px;
+  }
+
+  .header__theme-title,
+  .footer__theme-title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__theme-title_description {
+    grid-column: 2 / 3;
+  }
 }

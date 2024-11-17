@@ -95,3 +95,15 @@
     inset-block-start: 50%;
   }
 }
+
+@media (375px < width <= 768px) {
+  .page.theme_dark .header__rec {
+    inset-block-start: 20px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .header__rec {
+      inset-block-start: 20px;
+    }
+  }
+}
