@@ -17,8 +17,41 @@
   --page-title-bg-color: #ff8dcb;
   --page-title-desc-color: #353430;
   --section-title-color: #353430;
+  --article-title-color: #353430;
+  --article-title-bg-color: #ff8dcb;
+  --article-text-color: #353430;
+  --article-link-shadow-color: #ff8dcb;
+  --article-subtitle-color: #353430;
+  --article-subtitle-bg-color: #ff8dcb;
+  --gallery-title-color: #353430;
+  --gallery-title-bg-color: #ff8dcb;
+}
 
+.page.theme_light .header__rec {
+  display: none;
+}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg-image: url(../images/cover-image-light.png);
+    --decor-color: #353430;
+    --nav-color: #353430;
+    --page-title-color: #ffc2e6;
+    --page-title-shadow-color: #ff8dcb;
+    --page-title-bg-color: #ff8dcb;
+    --page-title-desc-color: #353430;
+    --section-title-color: #353430;
+    --article-title-color: #353430;
+    --article-title-bg-color: #ff8dcb;
+    --article-text-color: #353430;
+    --article-link-shadow-color: #ff8dcb;
+    --article-subtitle-color: #353430;
+    --article-subtitle-bg-color: #ff8dcb;
+    --gallery-title-color: #353430;
+    --gallery-title-bg-color: #ff8dcb;
+  }
 
-
+  .header__rec {
+    display: none;
+  }
 }
