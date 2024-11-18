@@ -96,7 +96,7 @@
   }
 }
 
-@media (375px < width <= 768px) {
+@media (width >= 768px) {
   .page.theme_dark .header__rec {
     inset-block-start: 20px;
   }

@@ -21,4 +21,11 @@
   --article-subtitle-bg-color: #ff0070;
   --gallery-title-color: #000028;
   --gallery-title-bg-color: #ff0070;
+  --main-gap: 10px;
+}
+
+@media (width >= 768px) {
+  :root {
+    --main-gap: 20px;
+  }
 }
