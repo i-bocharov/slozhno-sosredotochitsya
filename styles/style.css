@@ -72,6 +72,10 @@
   background-color: transparent;
 }
 
+.header__theme-menu-button:hover {
+  outline: 1px solid color-mix(in hsl, var(--nav-color, #ff0070) 40%, transparent);
+}
+
 .header__theme-menu-button_active {
   outline: 1px solid var(--nav-color, #ff0070);
 }
@@ -207,11 +211,11 @@
 }
 
 .main__section_gallery-image {
+  display: block;
   object-fit: cover;
   object-position: center;
   inline-size: 100%;
   block-size: 100%;
-  max-block-size: 100%;
 }
 
 .footer {
@@ -300,7 +304,6 @@
     grid-template-columns: repeat(auto-fill, calc(calc(100% - 40px) / 3));
     grid-auto-flow: dense;
     gap: 20px;
-    min-block-size: 780px;
   }
 
   .main__section_gallery-item:nth-child(1) {
