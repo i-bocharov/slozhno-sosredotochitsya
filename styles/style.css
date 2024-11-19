@@ -2,6 +2,7 @@
 
 .page {
   padding-inline: 10px;
+  background-color: var(--page-bg-color);
   background-image: var(--page-bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
   background-position: center;

@@ -5,6 +5,7 @@
 
 :root {
   --main-font-family: 'IBM Plex mono';
+  --page-bg-color: #000028;
   --page-bg-image: url(../images/cover-image-dark.png);
   --decor-color: #ff0070;
   --nav-color: #ff0070;
