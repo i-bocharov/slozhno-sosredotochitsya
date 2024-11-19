@@ -1,6 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  margin: 0 auto;
   padding-inline: 10px;
   background-color: var(--page-bg-color);
   background-image: var(--page-bg-image, url(../images/cover-image-dark.png));
