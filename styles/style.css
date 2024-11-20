@@ -9,6 +9,9 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  font-family: var(--main-font-family, Courier, monospace);
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 .header {
@@ -57,12 +60,9 @@
   gap: 12px;
 }
 
-.header__theme-menu-item {
-
-}
-
 .header__theme-menu-button {
   border: none;
+  border-bottom: 1px solid transparent;
   padding: 2px 13px 4px;
   color: var(--nav-color, #ff0070);
   font-weight: normal;
@@ -70,16 +70,31 @@
   line-height: 1;
   text-transform: lowercase;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
   outline: 1px solid color-mix(in hsl, var(--nav-color, #ff0070) 40%, transparent);
 }
 
-.header__theme-menu-button_active {
+.header__theme-menu-button:active {
   outline: 1px solid var(--nav-color, #ff0070);
 }
 
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:not(:active):focus-visible {
+  border-block-end: 1px solid var(--nav-color, #ff0070);
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--nav-color, #ff0070);
+  pointer-events: none;
+}
+
+/* не пригодились
 .header__theme-menu-button_type_light {
 
 }
@@ -91,6 +106,7 @@
 .header__theme-menu-button_type_dark {
 
 }
+*/
 
 .header__theme-title,
 .footer__theme-title {
@@ -134,9 +150,11 @@
   gap: 20px;
 }
 
+/* не пригодилось
 .main__section-item {
 
 }
+*/
 
 .main__article {
   display: grid;
@@ -182,7 +200,16 @@
 }
 
 .main__article-link:hover {
-  border-bottom: 1px solid currentColor;
+  border-block-end: 1px solid currentColor;
+}
+
+.main__article-link:focus {
+  outline: none;
+}
+
+.main__article-link:not(:hover):not(:active):focus-visible {
+  outline: 1px solid var(--article-text-color, #ff0070);
+  outline-offset: 1px;
 }
 
 .main__section_gallery {
@@ -203,12 +230,14 @@
 .main__section_gallery-list {
   display: grid;
   grid-auto-flow: dense;
-  gap: 6px;
+  gap: 10px;
 }
 
+/* не пригодилось
 .main__section_gallery-item {
 
 }
+*/
 
 .main__section_gallery-image {
   display: block;
