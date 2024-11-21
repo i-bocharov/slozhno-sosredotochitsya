@@ -315,7 +315,7 @@
   }
 
   .main__section {
-    grid-template-columns: 1fr 2f;
+    grid-template-columns: 1fr 2fr;
   }
 
   .main__section:nth-child(2) {
