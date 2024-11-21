@@ -315,7 +315,7 @@
   }
 
   .main__section {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr calc(((100% - 40px) / 3 * 2) + 20px);
   }
 
   .main__section:nth-child(2) {
