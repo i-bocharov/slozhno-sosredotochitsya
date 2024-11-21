@@ -35,21 +35,20 @@
   font-weight: normal;
   font-size: 18px;
   line-height: calc(25 / 18);
-  inset-inline-end: 28px;
+  inset-inline-end: 38px;
   inset-block-start: 10px;
 }
 
 .page.theme_dark .header__rec::after {
   content: '';
   position: absolute;
-  margin: -5px -20px 0 0;
   border-radius: 50%;
   box-shadow: 0 0 4px 2px var(--decor-color, #ff0070);
   background-color: var(--decor-color, #ff0070);
   inline-size: 10px;
   block-size: 10px;
-  inset-inline-end: 0;
-  inset-block-start: 50%;
+  inset-inline-end: -20px;
+  inset-block-start: 10px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,21 +79,20 @@
     font-weight: normal;
     font-size: 18px;
     line-height: calc(25 / 18);
-    inset-inline-end: 28px;
+    inset-inline-end: 38px;
     inset-block-start: 10px;
   }
 
   .header__rec::after {
     content: '';
     position: absolute;
-    margin: -5px -20px 0 0;
     border-radius: 50%;
     box-shadow: 0 0 4px 2px var(--decor-color, #ff0070);
     background-color: var(--decor-color, #ff0070);
     inline-size: 10px;
     block-size: 10px;
-    inset-inline-end: 0;
-    inset-block-start: 50%;
+    inset-inline-end: -20px;
+    inset-block-start: 10px;
   }
 }
 
@@ -102,10 +100,12 @@
 
   @media (prefers-color-scheme: dark) {
     .header__rec {
+      inset-inline-end: 48px;
       inset-block-start: 20px;
     }
   }
   .page.theme_dark .header__rec {
+    inset-inline-end: 48px;
     inset-block-start: 20px;
   }
 }

@@ -2,7 +2,6 @@
 
 .page {
   margin: 0 auto;
-  padding-inline: 10px;
   background-color: var(--page-bg-color);
   background-image: var(--page-bg-image, url(../images/cover-image-dark.png));
   background-repeat: no-repeat;
@@ -15,6 +14,7 @@
 }
 
 .header {
+  padding-inline: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr min-content 1fr;
@@ -32,7 +32,7 @@
   position: absolute;
   border-inline-end: 1px solid var(--decor-color, #ff0070);
   border-block-start: 1px solid var(--decor-color, #ff0070);
-  inset-inline-end: 0;
+  inset-inline-end: 10px;
   inset-block-start: 10px;
   inline-size: 25px;
   block-size: 25px;
@@ -43,7 +43,7 @@
   position: absolute;
   border-inline-start: 1px solid var(--decor-color, #ff0070);
   border-block-end: 1px solid var(--decor-color, #ff0070);
-  inset-inline-start: 0;
+  inset-inline-start: 10px;
   inset-block-end: 10px;
   inline-size: 25px;
   block-size: 25px;
@@ -57,7 +57,7 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 12px;
+  gap: 11px;
 }
 
 .header__theme-menu-button {
@@ -130,6 +130,7 @@
 .main {
   display: grid;
   gap: 50px;
+  padding-inline: 10px;
   margin-block: 40px;
 }
 
@@ -280,7 +281,8 @@
 }
 
 @media (width >= 768px) {
-  .page {
+  .header,
+  .main {
     padding-inline: 20px;
   }
 
@@ -289,10 +291,12 @@
   }
 
   .decorated-zone::before {
+    inset-inline-end: 20px;
     inset-block-start: 20px;
   }
 
   .decorated-zone::after {
+    inset-inline-start: 20px;
     inset-block-end: 20px;
   }
 
