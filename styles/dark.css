@@ -27,3 +27,7 @@
   --gallery-title-color: #000028;
   --gallery-title-bg-color: #ff0070;
 }
+
+.page.theme_dark .header__rec {
+  display: inline-block;
+}

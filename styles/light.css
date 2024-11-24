@@ -53,7 +53,7 @@
     --gallery-title-bg-color: #ff8dcb;
   }
 
-  .header__rec {
+  .page .header__rec {
     display: none;
   }
 }
